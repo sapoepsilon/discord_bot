@@ -82,7 +82,7 @@ We are continuously working on improving this bot. Upcoming features include:
     ./create_configure.sh
     ```
 
-3. Edit `configure.yaml` with your actual configurations.
+3. Edit `config.yaml` with your actual configurations.
 
 ### Fedora / RHEL 🎩
 
@@ -116,7 +116,7 @@ We are continuously working on improving this bot. Upcoming features include:
     ./create_configure.sh
     ```
 
-3. Edit `configure.yaml` with your actual configurations.
+3. Edit `config.yaml` with your actual configurations.
 
 </details>
 
@@ -124,7 +124,7 @@ We are continuously working on improving this bot. Upcoming features include:
 
 ## Usage 🚀
 
-1. Make sure `configure.yaml` is in `.gitignore`.
+1. Make sure `config.yaml` is in `.gitignore`.
 2. Run the bot:
 
     ```bash
