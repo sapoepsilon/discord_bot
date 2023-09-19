@@ -85,7 +85,7 @@ async def on_message(message):
                     # Delete the message from the channel
                     try:
                         await message.delete()
-                        await ctx.send(f"Uploaded ✅ and deleted your zip from the chat... Good Job {author}. The TechLab team will review your assignment as soon as possible ⏳")
+                        await ctx.send(f"Uploaded your homework to the server ✅, and deleted your zip from the chat... Good Job {author}. The TechLab team will review your assignment as soon as possible ⏳")
                     except Exception as e:
                         print(f"Error while deleting message or sending confirmation: {e}")
                         return
