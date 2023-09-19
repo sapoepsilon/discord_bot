@@ -6,6 +6,7 @@ import asyncio
 import os
 import logging
 import yaml
+import zipfile
 
 
 # Create an instance of the Intents class with default values
@@ -65,15 +66,21 @@ async def on_message(message):
 
                 if attachment.filename.endswith('.zip'):
                     print(f"Saving {attachment.filename}...")
-
-                    local_path = os.path.join(server_directory,attachment.filename + author)
-
+                    
+                    local_path = os.path.join(server_directory, attachment.filename + author)
+                    
                     try:
                         await attachment.save(local_path)
                         print("Attachment saved.")
+
+                        # Unzip the saved file
+                        unzip_path = os.path.join(server_directory, 'unzipped_' + author)
+                        with zipfile.ZipFile(local_path, 'r') as zip_ref:
+                            zip_ref.extractall(unzip_path)
+                        print(f"Attachment unzipped to {unzip_path}.")
+
                     except Exception as e:
-                        print(f"Error while saving attachment: {e}")
-                        return
+                        print(f"Error occurred: {e}")
 
                     # Delete the message from the channel
                     try:
