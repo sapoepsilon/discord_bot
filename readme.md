@@ -99,7 +99,7 @@ We are continuously working on improving this bot. Upcoming features include:
     ./create_configure.sh
     ```
 
-3. Edit `configure.yaml` with your actual configurations.
+3. Edit `config.yaml` with your actual configurations.
 
 ### Arch Linux 🏹
 
